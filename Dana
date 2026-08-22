@@ -1,0 +1,93 @@
+# fuzzy-octo-memegit@github.com:ismailjohan56-creator/fuzzy-octo-meme.git
+https://m.facebook.com/reg/
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Belajar Login</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body {
+            background: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .kotak-login {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        h2 {
+            text-align: center;
+            color: #1a73e8;
+            margin-bottom: 25px;
+        }
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #1a73e8;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #1557b0;
+        }
+        .pesan {
+            margin-top: 15px;
+            text-align: center;
+            color: green;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="kotak-login">
+        <h2>Belajar Login</h2>
+        <form id="formLogin">
+            <input type="text" id="username" placeholder="Nama Pengguna" required>
+            <input type="password" id="sandi" placeholder="Kata Sandi" required>
+            <button type="submit">Masuk</button>
+        </form>
+        <div class="pesan" id="pesanBerhasil">
+            ✅ Ini hanya contoh pembelajaran! Data TIDAK dikirim ke mana pun.
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('formLogin');
+        const pesan = document.getElementById('pesanBerhasil');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault(); // Mencegah pengiriman data
+            const user = document.getElementById('username').value;
+            // JANGAN PERNAH mengirim data pengguna ke server tersembunyi!
+            pesan.style.display = 'block';
+            pesan.textContent = `Halo ${user}! Ini adalah simulasi saja.`;
+            form.reset();
+        });
+    </script>
+</body>
+</html>
